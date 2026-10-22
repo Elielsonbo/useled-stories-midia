@@ -1,0 +1,47 @@
+name: Publicar story
+
+on:
+  schedule:
+    # 11:50 e 22:50 UTC = 8:50 e 19:50 em Brasília. O GitHub costuma atrasar
+    # alguns minutos, então o story sai por volta das 9h e das 20h.
+    - cron: "50 11,22 * * *"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "publicar = publica agora | teste = só confere token e fila"
+        default: teste
+        type: choice
+        options: [teste, publicar]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-story
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publicar próximo story da fila
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: "17841405843278969"
+          MODO: ${{ github.event.inputs.modo || 'publicar' }}
+        run: python scripts/publicar_fila.py
+
+      - name: Salvar status da fila
+        if: always()
+        run: |
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fila/fila.json
+          git diff --cached --quiet || (git commit -m "Fila: status após execução $(date -u +%FT%TZ)" && git pull --rebase && git push)
