@@ -5,6 +5,10 @@ on:
     # 11:50 e 22:50 UTC = 8:50 e 19:50 em Brasília. O GitHub costuma atrasar
     # alguns minutos, então o story sai por volta das 9h e das 20h.
     - cron: "50 11,22 * * *"
+    # Reservas: o GitHub às vezes não dispara o agendamento. Se o story já saiu
+    # nas últimas 3h, o script não faz nada, então não há post duplicado.
+    - cron: "20 12,23 * * *"   # 9:20 e 20:20
+    - cron: "50 12,23 * * *"   # 9:50 e 20:50
   workflow_dispatch:
     inputs:
       modo:
