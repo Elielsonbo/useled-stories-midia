@@ -94,6 +94,14 @@ def main():
         print(json.dumps(resumo, ensure_ascii=False))
         return 0
 
+    # O GitHub às vezes dispara com horas de atraso. Fora das janelas da manhã
+    # (8h-12h) e da noite (19h-23h) não publica nada, para não sair story de madrugada.
+    if modo == "publicar" and not (8 <= agora.hour < 12 or 19 <= agora.hour < 23) \
+            and not os.environ.get("FORCAR"):
+        print(json.dumps({**resumo, "acao": "nada (fora da janela 8-12h / 19-23h)"}, ensure_ascii=False))
+        FILA.write_text(json.dumps(fila, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        return 0
+
     if recentes:
         print(json.dumps({**resumo, "acao": "nada (já publicado nas últimas 3h)"}, ensure_ascii=False))
         FILA.write_text(json.dumps(fila, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
