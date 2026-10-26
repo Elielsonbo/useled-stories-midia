@@ -67,14 +67,15 @@
     },
     {
       "id": "2026-10-25_09h_literatura_2188475",
-      "horario": "2026-10-25T09:00:00-03:00",
+      "horario": null,
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-25_09h_literatura_2188475.jpg",
       "tema": "literatura",
       "titulo": "Aparador de livros bruxo",
       "model_id": 2188475,
       "link": "https://makerworld.com/en/models/2188475-harry-potter-bookend",
       "criador": "Sevro",
-      "status": "pendente"
+      "status": "pendente",
+      "nota": "horário 2026-10-25T09:00:00-03:00 perdido; virou reserva"
     },
     {
       "id": "2026-10-25_20h_natal_2007583",
@@ -85,7 +86,9 @@
       "model_id": 2007583,
       "link": "https://makerworld.com/en/models/2007583-knitted-christmas-tree",
       "criador": "Smoggy3D",
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "18117812884791654",
+      "publicado_em": "2026-10-25T21:45:40-03:00"
     },
     {
       "id": "2026-10-26_09h_decor_2975391",
