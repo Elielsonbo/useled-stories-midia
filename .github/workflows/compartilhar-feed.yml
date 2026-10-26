@@ -1,0 +1,104 @@
+name: Compartilhar post do feed
+
+on:
+  schedule:
+    # A cada 2 dias (o script decide quais dias, a partir de 26/10/2026), à tarde.
+    # O GitHub atrasa os agendamentos de 1h30 a 4h; o script só publica entre 11h e 18h
+    # de Brasília e no máximo 1 vez por dia, então disparos extras não duplicam.
+    # Horários em UTC (Brasília = UTC-3):
+    - cron: "17 13 * * *"   # 10h17
+    - cron: "17 14 * * *"   # 11h17
+    - cron: "17 15 * * *"   # 12h17
+    - cron: "17 16 * * *"   # 13h17
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "publicar = publica | teste = só gera a arte (baixe em Artifacts)"
+        default: teste
+        type: choice
+        options: [teste, publicar]
+      forcar:
+        description: "Ignorar dia e janela de horário"
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-story   # mesmo grupo do publicador da fila: nunca rodam juntos
+  cancel-in-progress: false
+
+jobs:
+  compartilhar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: "17841405843278969"
+      MODO: ${{ github.event.inputs.modo || 'publicar' }}
+      FORCAR: ${{ github.event.inputs.forcar == 'true' && '1' || '' }}
+      URL_BASE: https://raw.githubusercontent.com/${{ github.repository }}/stories
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Hoje é dia de compartilhar?
+        id: decidir
+        run: python scripts/compartilhar_feed.py decidir
+
+      - name: Instalar navegador para gerar a arte
+        if: steps.decidir.outputs.seguir == '1'
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+
+      - name: Escolher post e gerar arte
+        id: gerar
+        if: steps.decidir.outputs.seguir == '1'
+        run: |
+          python scripts/compartilhar_feed.py gerar
+          if [ -f out/escolha.json ]; then echo "tem=1" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Guardar arte para conferência
+        if: steps.gerar.outputs.tem == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-feed
+          path: out/story_feed.jpg
+
+      - name: Enviar imagem para a branch stories
+        if: steps.gerar.outputs.tem == '1' && env.MODO == 'publicar'
+        run: |
+          ARQ=$(python -c "import json;print(json.load(open('out/escolha.json'))['arquivo'])")
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin stories
+          git worktree add ../st origin/stories
+          mkdir -p "../st/$(dirname "$ARQ")"
+          cp out/story_feed.jpg "../st/$ARQ"
+          cd ../st
+          git add "$ARQ"
+          git commit -m "Story do feed: $ARQ"
+          git push origin HEAD:stories
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$URL_BASE/$ARQ")
+            [ "$code" = "200" ] && echo "URL ok" && exit 0
+            sleep 6
+          done
+          echo "URL da imagem não ficou disponível"; exit 1
+
+      - name: Publicar no story
+        if: steps.gerar.outputs.tem == '1'
+        run: python scripts/compartilhar_feed.py publicar
+
+      - name: Salvar histórico
+        if: always()
+        run: |
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fila/compartilhados.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Feed: histórico de compartilhamentos $(date -u +%FT%TZ)" && git pull --rebase && git push)
