@@ -89,6 +89,18 @@ def escolher(posts, hist, agora):
     return (antigos[0] if antigos else None), len(ok), 0
 
 
+TITULOS_RECENTE = ["Acabou de sair<br>da nossa impressora", "Produção nova<br>no feed!",
+                   "Olha o que a gente<br>acabou de fazer"]
+TITULOS_ANTIGO = ["Vem conferir<br>nossas produções", "Feito por nós,<br>camada por camada",
+                  "Já viu essa<br>produção?"]
+
+
+def titulo_da_vez(recente: bool) -> str:
+    """Alterna os títulos a cada compartilhamento para não repetir."""
+    lista = TITULOS_RECENTE if recente else TITULOS_ANTIGO
+    return lista[len(ler_hist()["itens"]) % len(lista)]
+
+
 def gerar_arte(post, agora):
     from playwright.sync_api import sync_playwright
     OUT.mkdir(exist_ok=True)
@@ -100,7 +112,7 @@ def gerar_arte(post, agora):
     video = post.get("media_type") == "VIDEO"
     campos = {
         "kicker": "No nosso feed",
-        "titulo": ("Tem post novo<br>por aqui" if recente else "Já viu este post?"),
+        "titulo": titulo_da_vez(recente),
         "legenda": html.escape(legenda_curta(post.get("caption", ""))),
         "cta": "Assista no nosso perfil" if video else "Veja o post completo no perfil",
         "imagem": foto.resolve().as_uri(),
