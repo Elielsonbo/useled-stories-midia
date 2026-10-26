@@ -163,7 +163,7 @@ def etapa_gerar():
         print(json.dumps({**resumo, "acao": "nenhum post elegível"}, ensure_ascii=False))
         return 0
     gerar_arte(post, agora)
-    nome = f"feed/{agora:%Y-%m-%d}_{post['id']}.jpg"
+    nome = f"feed/{'teste_' if modo != 'publicar' else ''}{agora:%Y-%m-%d}_{post['id']}.jpg"
     escolha = {"media_id": post["id"], "permalink": post.get("permalink"), "tipo": post.get("media_type"),
                "post_em": post["_ts"].isoformat(), "arquivo": nome, "modo": modo}
     (OUT / "escolha.json").write_text(json.dumps(escolha, ensure_ascii=False, indent=2), encoding="utf-8")

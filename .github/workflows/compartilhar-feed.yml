@@ -71,7 +71,7 @@ jobs:
           path: out/story_feed.jpg
 
       - name: Enviar imagem para a branch stories
-        if: steps.gerar.outputs.tem == '1' && env.MODO == 'publicar'
+        if: steps.gerar.outputs.tem == '1'
         run: |
           ARQ=$(python -c "import json;print(json.load(open('out/escolha.json'))['arquivo'])")
           git config user.name "useled-bot"
