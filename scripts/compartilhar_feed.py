@@ -119,6 +119,11 @@ def gerar_arte(post, agora):
         # garante que nada encosta no rodapé
         sobra = pg.evaluate("""() => {const c=document.querySelector('.cta').getBoundingClientRect();
                                const l=document.querySelector('.leg').getBoundingClientRect(); return c.top-l.bottom}""")
+        if not campos["legenda"]:
+            pg.evaluate("document.querySelector('.leg').style.display='none';"
+                        "document.querySelector('.card img').style.maxHeight='1120px'")
+            sobra = pg.evaluate("""() => {const c=document.querySelector('.cta').getBoundingClientRect();
+                                   const k=document.querySelector('.card').getBoundingClientRect(); return c.top-k.bottom}""")
         if sobra < 30:
             pg.evaluate("document.querySelector('.card img').style.maxHeight='780px'")
         pg.screenshot(path=str(OUT / "story_feed.jpg"), type="jpeg", quality=90)
