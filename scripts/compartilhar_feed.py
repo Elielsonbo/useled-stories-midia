@@ -128,16 +128,21 @@ def gerar_arte(post, agora):
         pg.goto(pag.as_uri())
         pg.wait_for_load_state("networkidle")
         pg.wait_for_timeout(500)
-        # garante que nada encosta no rodapé
-        sobra = pg.evaluate("""() => {const c=document.querySelector('.cta').getBoundingClientRect();
-                               const l=document.querySelector('.leg').getBoundingClientRect(); return c.top-l.bottom}""")
+        # ajusta a imagem ao espaço (também AMPLIA fotos pequenas que a API às vezes entrega)
+        fit = """(maxH) => {const i=document.querySelector('.card img');
+                   const s=Math.min(856/i.naturalWidth, maxH/i.naturalHeight);
+                   i.style.maxWidth='none'; i.style.maxHeight='none';
+                   i.style.width=Math.round(i.naturalWidth*s)+'px'; i.style.height=Math.round(i.naturalHeight*s)+'px';}"""
+        folga = """() => {const c=document.querySelector('.cta').getBoundingClientRect();
+                   const l=document.querySelector('.leg'); const ref=l.offsetParent? l : document.querySelector('.card');
+                   return c.top - ref.getBoundingClientRect().bottom}"""
         if not campos["legenda"]:
-            pg.evaluate("document.querySelector('.leg').style.display='none';"
-                        "document.querySelector('.card img').style.maxHeight='1120px'")
-            sobra = pg.evaluate("""() => {const c=document.querySelector('.cta').getBoundingClientRect();
-                                   const k=document.querySelector('.card').getBoundingClientRect(); return c.top-k.bottom}""")
-        if sobra < 30:
-            pg.evaluate("document.querySelector('.card img').style.maxHeight='780px'")
+            pg.evaluate("document.querySelector('.leg').style.display='none'")
+        altura = 1120 if not campos["legenda"] else 920
+        pg.evaluate(fit, altura)
+        while pg.evaluate(folga) < 30 and altura > 600:  # nada encosta no rodapé
+            altura -= 40
+            pg.evaluate(fit, altura)
         pg.screenshot(path=str(OUT / "story_feed.jpg"), type="jpeg", quality=90)
         b.close()
     pag.unlink()
