@@ -79,9 +79,9 @@ def main():
     recentes = [i for i in itens if i["status"] == "publicado"
                 and datetime.fromisoformat(i["publicado_em"]) > agora - timedelta(hours=3)]
     pend = [i for i in itens if i["status"] == "pendente"]
-    devidos = sorted([i for i in pend if h(i) and h(i) <= agora + timedelta(minutes=40)], key=h)
+    devidos = sorted([i for i in pend if h(i) and h(i) <= agora + timedelta(minutes=60)], key=h)
     reservas = [i for i in pend if not h(i)]
-    futuros = [i for i in pend if h(i) and h(i) > agora + timedelta(minutes=40)]
+    futuros = [i for i in pend if h(i) and h(i) > agora + timedelta(minutes=60)]
 
     resumo = {"agora": agora.isoformat(timespec="minutes"), "devidos": len(devidos),
               "reservas": len(reservas), "agendados_futuros": len(futuros)}
