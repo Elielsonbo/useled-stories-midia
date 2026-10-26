@@ -124,6 +124,72 @@
       "link": "https://makerworld.com/en/models/2455048-japandi-ribbed-harmony-tray",
       "criador": "Dot.Design",
       "status": "pendente"
+    },
+    {
+      "id": "2026-10-26_20h_halloween_1713428",
+      "horario": "2026-10-26T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-26_20h_halloween_1713428.jpg",
+      "tema": "halloween",
+      "titulo": "Abóboras de bolso",
+      "model_id": 1713428,
+      "link": "https://makerworld.com/en/models/1713428-lil-pumpkins",
+      "criador": "3dPrintInPlace",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-27_09h_luminarias_1782139",
+      "horario": "2026-10-27T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-27_09h_luminarias_1782139.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária dragão de fogo",
+      "model_id": 1782139,
+      "link": "https://makerworld.com/en/models/1782139-dragon-breathing-fire-lamp",
+      "criador": "KadisGFX",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-27_20h_porta_isqueiro_2338561",
+      "horario": "2026-10-27T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-27_20h_porta_isqueiro_2338561.jpg",
+      "tema": "porta_isqueiro",
+      "titulo": "Capa de isqueiro dragão",
+      "model_id": 2338561,
+      "link": "https://makerworld.com/en/models/2338561-dragon-bic-sleeve",
+      "criador": "MrPotatoSleeves",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-28_09h_luminarias_566106",
+      "horario": "2026-10-28T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-28_09h_luminarias_566106.jpg",
+      "tema": "luminarias",
+      "titulo": "Plataforma 9¾ luminária",
+      "model_id": 566106,
+      "link": "https://makerworld.com/en/models/566106-harry-potter-platform-9-3-4-lamp-nightlamp",
+      "criador": "WEIWAY",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-28_20h_porta_isqueiro_96585",
+      "horario": "2026-10-28T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-28_20h_porta_isqueiro_96585.jpg",
+      "tema": "porta_isqueiro",
+      "titulo": "Capa de isqueiro com seu nome",
+      "model_id": 96585,
+      "link": "https://makerworld.com/en/models/96585-custom-bic-lighter-sleeves-with-your-name",
+      "criador": "misenique",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-29_09h_luminarias_1715103",
+      "horario": "2026-10-29T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-29_09h_luminarias_1715103.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária Quarta Asa",
+      "model_id": 1715103,
+      "link": "https://makerworld.com/en/models/1715103-fourth-wing-inspired-book-nook-book-plate",
+      "criador": "pagesnprojects",
+      "status": "pendente"
     }
   ]
 }
