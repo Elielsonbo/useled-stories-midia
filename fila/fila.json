@@ -140,14 +140,15 @@
     },
     {
       "id": "2026-10-27_09h_luminarias_1782139",
-      "horario": "2026-10-27T09:00:00-03:00",
+      "horario": null,
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-27_09h_luminarias_1782139.jpg",
       "tema": "luminarias",
       "titulo": "Luminária dragão de fogo",
       "model_id": 1782139,
       "link": "https://makerworld.com/en/models/1782139-dragon-breathing-fire-lamp",
       "criador": "KadisGFX",
-      "status": "pendente"
+      "status": "pendente",
+      "nota": "horário 2026-10-27T09:00:00-03:00 perdido; virou reserva"
     },
     {
       "id": "2026-10-27_20h_porta_isqueiro_2338561",
