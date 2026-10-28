@@ -166,14 +166,15 @@
     },
     {
       "id": "2026-10-28_09h_luminarias_566106",
-      "horario": "2026-10-28T09:00:00-03:00",
+      "horario": null,
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-28_09h_luminarias_566106.jpg",
       "tema": "luminarias",
       "titulo": "Plataforma 9¾ luminária",
       "model_id": 566106,
       "link": "https://makerworld.com/en/models/566106-harry-potter-platform-9-3-4-lamp-nightlamp",
       "criador": "WEIWAY",
-      "status": "pendente"
+      "status": "pendente",
+      "nota": "horário 2026-10-28T09:00:00-03:00 perdido; virou reserva"
     },
     {
       "id": "2026-10-28_20h_porta_isqueiro_96585",
