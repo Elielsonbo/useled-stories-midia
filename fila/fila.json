@@ -67,7 +67,7 @@
     },
     {
       "id": "2026-10-25_09h_literatura_2188475",
-      "horario": null,
+      "horario": "2026-11-02T09:00:00-03:00",
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-25_09h_literatura_2188475.jpg",
       "tema": "literatura",
       "titulo": "Aparador de livros bruxo",
@@ -75,7 +75,7 @@
       "link": "https://makerworld.com/en/models/2188475-harry-potter-bookend",
       "criador": "Sevro",
       "status": "pendente",
-      "nota": "horário 2026-10-25T09:00:00-03:00 perdido; virou reserva"
+      "nota": "horário 2026-10-25T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-02T09:00 em 29/10"
     },
     {
       "id": "2026-10-25_20h_natal_2007583",
@@ -140,7 +140,7 @@
     },
     {
       "id": "2026-10-27_09h_luminarias_1782139",
-      "horario": null,
+      "horario": "2026-10-30T09:00:00-03:00",
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-27_09h_luminarias_1782139.jpg",
       "tema": "luminarias",
       "titulo": "Luminária dragão de fogo",
@@ -148,7 +148,7 @@
       "link": "https://makerworld.com/en/models/1782139-dragon-breathing-fire-lamp",
       "criador": "KadisGFX",
       "status": "pendente",
-      "nota": "horário 2026-10-27T09:00:00-03:00 perdido; virou reserva"
+      "nota": "horário 2026-10-27T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-10-30T09:00 em 29/10"
     },
     {
       "id": "2026-10-27_20h_porta_isqueiro_2338561",
@@ -166,7 +166,7 @@
     },
     {
       "id": "2026-10-28_09h_luminarias_566106",
-      "horario": null,
+      "horario": "2026-11-01T09:00:00-03:00",
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-28_09h_luminarias_566106.jpg",
       "tema": "luminarias",
       "titulo": "Plataforma 9¾ luminária",
@@ -174,7 +174,7 @@
       "link": "https://makerworld.com/en/models/566106-harry-potter-platform-9-3-4-lamp-nightlamp",
       "criador": "WEIWAY",
       "status": "pendente",
-      "nota": "horário 2026-10-28T09:00:00-03:00 perdido; virou reserva"
+      "nota": "horário 2026-10-28T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-01T09:00 em 29/10"
     },
     {
       "id": "2026-10-28_20h_porta_isqueiro_96585",
@@ -201,6 +201,61 @@
       "status": "publicado",
       "media_id": "17914325715550181",
       "publicado_em": "2026-10-29T12:23:32-03:00"
+    },
+    {
+      "id": "2026-10-29_20h_halloween_3411492",
+      "horario": "2026-10-29T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-29_20h_halloween_3411492.jpg",
+      "tema": "halloween",
+      "titulo": "Lanterna fantasma",
+      "model_id": "3411492",
+      "link": "https://makerworld.com/en/models/3411492-spooky-ghost-skull-lantern",
+      "criador": "SpoolWorks",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-30_20h_halloween_3319667",
+      "horario": "2026-10-30T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-30_20h_halloween_3319667.jpg",
+      "tema": "halloween",
+      "titulo": "Abóbora com cemitério",
+      "model_id": "3319667",
+      "link": "https://makerworld.com/en/models/3319667-halloween-pumpkin-diorama-spooky-graveyard-deco",
+      "criador": "Ababskia",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-31_09h_natal_3452893",
+      "horario": "2026-10-31T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-31_09h_natal_3452893.jpg",
+      "tema": "natal",
+      "titulo": "Árvore estrelada",
+      "model_id": "3452893",
+      "link": "https://makerworld.com/en/models/3452893-christmas-tree-starry-glow-for-led-tealights",
+      "criador": "LetHimPrint",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-10-31_20h_halloween_1790758",
+      "horario": "2026-10-31T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/10/2026-10-31_20h_halloween_1790758.jpg",
+      "tema": "halloween",
+      "titulo": "Abóbora luminosa",
+      "model_id": "1790758",
+      "link": "https://makerworld.com/en/models/1790758-modern-pumpkin-tea-light",
+      "criador": "Maxx_Design",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-01_20h_decor_2587858",
+      "horario": "2026-11-01T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-01_20h_decor_2587858.jpg",
+      "tema": "decor",
+      "titulo": "Pote de corações",
+      "model_id": "2587858",
+      "link": "https://makerworld.com/en/models/2587858-heart-vase-with-lid",
+      "criador": "G.M.3D",
+      "status": "pendente"
     }
   ]
 }
