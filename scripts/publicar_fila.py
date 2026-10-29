@@ -76,8 +76,12 @@ def main():
             i["nota"] = f"horário {i['horario']} perdido; virou reserva"
             i["horario"] = None
 
+    # um story por turno: manhã (antes das 16h) ou noite, no mesmo dia
+    def turno(d):
+        return (d.date(), d.hour < 16)
     recentes = [i for i in itens if i["status"] == "publicado"
-                and datetime.fromisoformat(i["publicado_em"]) > agora - timedelta(hours=3)]
+                and (datetime.fromisoformat(i["publicado_em"]) > agora - timedelta(hours=3)
+                     or turno(datetime.fromisoformat(i["publicado_em"]).astimezone(SP)) == turno(agora))]
     pend = [i for i in itens if i["status"] == "pendente"]
     devidos = sorted([i for i in pend if h(i) and h(i) <= agora + timedelta(minutes=60)], key=h)
     reservas = [i for i in pend if not h(i)]
@@ -95,15 +99,15 @@ def main():
         return 0
 
     # O GitHub às vezes dispara com horas de atraso. Fora das janelas da manhã
-    # (8h-12h) e da noite (19h-23h) não publica nada, para não sair story de madrugada.
-    if modo == "publicar" and not (8 <= agora.hour < 12 or 19 <= agora.hour < 23) \
+    # (8h-14h) e da noite (19h-23h) não publica nada, para não sair story de madrugada.
+    if modo == "publicar" and not (8 <= agora.hour < 14 or 19 <= agora.hour < 23) \
             and not os.environ.get("FORCAR"):
-        print(json.dumps({**resumo, "acao": "nada (fora da janela 8-12h / 19-23h)"}, ensure_ascii=False))
+        print(json.dumps({**resumo, "acao": "nada (fora da janela 8-14h / 19-23h)"}, ensure_ascii=False))
         FILA.write_text(json.dumps(fila, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return 0
 
     if recentes:
-        print(json.dumps({**resumo, "acao": "nada (já publicado nas últimas 3h)"}, ensure_ascii=False))
+        print(json.dumps({**resumo, "acao": "nada (já publicado neste turno)"}, ensure_ascii=False))
         FILA.write_text(json.dumps(fila, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return 0
 
