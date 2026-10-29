@@ -1,0 +1,71 @@
+{
+  "_info": "Produtos da loja para o story semanal (1 por semana, em rodízio). Imagem: branch stories, produtos/<id>.jpg.",
+  "produtos": [
+    {
+      "id": "58218531411",
+      "titulo": "Porta-copos<br>Costela de Adão",
+      "legenda": "As folhas viram porta-copos e voltam para o vasinho. Mesa posta com charme.",
+      "preco": "R$ 54,90"
+    },
+    {
+      "id": "58260916127",
+      "titulo": "Porta-joias<br>Gato Preto",
+      "legenda": "Bandeja para anéis, colares e bijuterias. Para quem ama gatos.",
+      "preco": "R$ 69,90"
+    },
+    {
+      "id": "58263428271",
+      "titulo": "Porta-retratos<br>ondulados",
+      "legenda": "Magnéticos, para fotos Instax Mini. Kits de 2, 5 ou 10 em 12 cores.",
+      "preco": "a partir de R$ 29,90"
+    },
+    {
+      "id": "58211055597",
+      "titulo": "Porta-maquiagem<br>giratório 360°",
+      "legenda": "Pincéis, batons e cosméticos sempre à mão na penteadeira.",
+      "preco": "R$ 59,90"
+    },
+    {
+      "id": "58260337368",
+      "titulo": "Vasinhos para<br>suculentas",
+      "legenda": "Kit com 3 vasos de texturas modernas para mesa, estante e sala.",
+      "preco": "a partir de R$ 24,90"
+    },
+    {
+      "id": "58210927197",
+      "titulo": "Suporte para<br>headphone",
+      "legenda": "Seu fone sempre no lugar certo, no setup gamer ou no escritório.",
+      "preco": "R$ 59,90"
+    },
+    {
+      "id": "22099479782",
+      "titulo": "Porta-copos<br>Monstera",
+      "legenda": "Kit com 6 folhas e base organizadora para proteger a mesa com estilo.",
+      "preco": "R$ 49,90"
+    },
+    {
+      "id": "58260902322",
+      "titulo": "Porta-algodão<br>e cotonete",
+      "legenda": "Canelado e elegante: organiza a bancada do banheiro.",
+      "preco": "R$ 24,90"
+    },
+    {
+      "id": "58260038457",
+      "titulo": "Kit organizador<br>de mesa",
+      "legenda": "Suporte de celular, porta-canetas e porta-objetos para o home office.",
+      "preco": "R$ 49,90"
+    },
+    {
+      "id": "22494968293",
+      "titulo": "Saboneteira<br>com drenagem",
+      "legenda": "Mantém o sabonete seco por mais tempo, com visual minimalista.",
+      "preco": "R$ 21,90"
+    },
+    {
+      "id": "58210157033",
+      "titulo": "Suporte de celular<br>minimalista",
+      "legenda": "Celular na altura certa para vídeos, receitas e chamadas.",
+      "preco": "R$ 21,90"
+    }
+  ]
+}

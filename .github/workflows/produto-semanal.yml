@@ -1,0 +1,102 @@
+name: Story semanal de produto
+
+on:
+  schedule:
+    # Domingo à tarde (o script só publica entre 14h e 19h de Brasília, 1 vez por semana).
+    # Horários em UTC (Brasília = UTC-3); disparos extras cobrem os atrasos do GitHub.
+    - cron: "17 17 * * 0"   # 14h17
+    - cron: "17 18 * * 0"   # 15h17
+    - cron: "17 19 * * 0"   # 16h17
+    - cron: "17 20 * * 0"   # 17h17
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "publicar = publica | teste = só gera a arte (baixe em Artifacts)"
+        default: teste
+        type: choice
+        options: [teste, publicar]
+      forcar:
+        description: "Ignorar dia, janela e semana"
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-story   # mesmo grupo do publicador da fila: nunca rodam juntos
+  cancel-in-progress: false
+
+jobs:
+  produto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: "17841405843278969"
+      MODO: ${{ github.event.inputs.modo || 'publicar' }}
+      FORCAR: ${{ github.event.inputs.forcar == 'true' && '1' || '' }}
+      URL_BASE: https://raw.githubusercontent.com/${{ github.repository }}/stories
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Hoje é dia do story de produto?
+        id: decidir
+        run: python scripts/produto_semanal.py decidir
+
+      - name: Instalar navegador para gerar a arte
+        if: steps.decidir.outputs.seguir == '1'
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+
+      - name: Escolher produto e gerar arte
+        id: gerar
+        if: steps.decidir.outputs.seguir == '1'
+        run: |
+          python scripts/produto_semanal.py gerar
+          if [ -f out/escolha.json ]; then echo "tem=1" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Guardar arte para conferência
+        if: steps.gerar.outputs.tem == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-produto
+          path: out/story_produto.jpg
+
+      - name: Enviar imagem para a branch stories
+        if: steps.gerar.outputs.tem == '1'
+        run: |
+          ARQ=$(python -c "import json;print(json.load(open('out/escolha.json'))['arquivo'])")
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin stories
+          git worktree add ../st origin/stories
+          mkdir -p "../st/$(dirname "$ARQ")"
+          cp out/story_produto.jpg "../st/$ARQ"
+          cd ../st
+          git add "$ARQ"
+          git commit -m "Story de produto: $ARQ"
+          git push origin HEAD:stories
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$URL_BASE/$ARQ")
+            [ "$code" = "200" ] && echo "URL ok" && exit 0
+            sleep 6
+          done
+          echo "URL da imagem não ficou disponível"; exit 1
+
+      - name: Publicar no story
+        if: steps.gerar.outputs.tem == '1'
+        run: python scripts/produto_semanal.py publicar
+
+      - name: Salvar histórico
+        if: always()
+        run: |
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fila/produtos_hist.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Produto: histórico do story semanal $(date -u +%FT%TZ)" && git pull --rebase && git push)
