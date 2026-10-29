@@ -20,6 +20,10 @@ on:
         default: teste
         type: choice
         options: [teste, publicar]
+      forcar:
+        description: "publicar mesmo fora das janelas 8-12h / 19-23h"
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -44,6 +48,7 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: "17841405843278969"
           MODO: ${{ github.event.inputs.modo || 'publicar' }}
+          FORCAR: ${{ github.event.inputs.forcar == 'true' && '1' || '' }}
         run: python scripts/publicar_fila.py
 
       - name: Salvar status da fila
