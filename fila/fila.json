@@ -175,8 +175,11 @@
       "model_id": 566106,
       "link": "https://makerworld.com/en/models/566106-harry-potter-platform-9-3-4-lamp-nightlamp",
       "criador": "WEIWAY",
-      "status": "pendente",
-      "nota": "horário 2026-10-28T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-01T09:00 em 29/10"
+      "status": "publicado",
+      "nota": "horário 2026-10-28T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-01T09:00 em 29/10",
+      "tentativas": 1,
+      "media_id": "18112043570520717",
+      "publicado_em": "2026-11-01T08:48:57-03:00"
     },
     {
       "id": "2026-10-28_20h_porta_isqueiro_96585",
