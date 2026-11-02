@@ -74,8 +74,11 @@
       "model_id": 2188475,
       "link": "https://makerworld.com/en/models/2188475-harry-potter-bookend",
       "criador": "Sevro",
-      "status": "pendente",
-      "nota": "horário 2026-10-25T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-02T09:00 em 29/10"
+      "status": "publicado",
+      "nota": "horário 2026-10-25T09:00:00-03:00 perdido; virou reserva; reaproveitado para 2026-11-02T09:00 em 29/10",
+      "tentativas": 1,
+      "media_id": "18027621704874575",
+      "publicado_em": "2026-11-02T10:23:23-03:00"
     },
     {
       "id": "2026-10-25_20h_natal_2007583",
