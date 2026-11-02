@@ -271,6 +271,72 @@
       "status": "publicado",
       "media_id": "17958670779258399",
       "publicado_em": "2026-11-01T20:32:41-03:00"
+    },
+    {
+      "id": "2026-11-02_20h_natal_3176140",
+      "horario": "2026-11-02T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-02_20h_natal_3176140.jpg",
+      "tema": "natal",
+      "titulo": "Árvore japandi",
+      "model_id": "3176140",
+      "link": "https://makerworld.com/en/models/3176140-christmas-tree-minimalistic-japandi-decor",
+      "criador": "NowCraft3D",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-03_09h_luminarias_2188163",
+      "horario": "2026-11-03T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-03_09h_luminarias_2188163.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária ondulada",
+      "model_id": "2188163",
+      "link": "https://makerworld.com/en/models/2188163-organic-ripple-lamp",
+      "criador": "janberrydesign",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-03_20h_natal_3330025",
+      "horario": "2026-11-03T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-03_20h_natal_3330025.jpg",
+      "tema": "natal",
+      "titulo": "Presépio em arco",
+      "model_id": "3330025",
+      "link": "https://makerworld.com/en/models/3330025-decorative-christmas-nativity-scene",
+      "criador": "VianaxxD",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-04_09h_decor_2056363",
+      "horario": "2026-11-04T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-04_09h_decor_2056363.jpg",
+      "tema": "decor",
+      "titulo": "Buquê de tulipas",
+      "model_id": "2056363",
+      "link": "https://makerworld.com/en/models/2056363-tulip-bouquet-modular",
+      "criador": "lukas_3d",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-04_20h_natal_2003920",
+      "horario": "2026-11-04T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-04_20h_natal_2003920.jpg",
+      "tema": "natal",
+      "titulo": "Renas caneladas",
+      "model_id": "2003920",
+      "link": "https://makerworld.com/en/models/2003920-christmas-reindeer",
+      "criador": "SabreDesign",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-05_09h_porta_isqueiro_2863505",
+      "horario": "2026-11-05T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-05_09h_porta_isqueiro_2863505.jpg",
+      "tema": "porta_isqueiro",
+      "titulo": "Capa-chaveiro de isqueiro",
+      "model_id": "2863505",
+      "link": "https://makerworld.com/en/models/2863505-bic-lighter-keychain-case",
+      "criador": "neilvfx",
+      "status": "pendente"
     }
   ]
 }
