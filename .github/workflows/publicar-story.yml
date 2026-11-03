@@ -4,7 +4,7 @@ on:
   schedule:
     # O GitHub atrasa os agendamentos de 1h30 a 4h (medido em 22–26/10).
     # Por isso disparamos bem antes e várias vezes. O script só publica a
-    # partir de 1h antes do horário e dentro das janelas 8h–14h e 19h–23h.
+    # partir de 2h antes do horário e dentro das janelas 8h–14h e 18h–23h59.
     # Se o story do turno (manhã ou noite) já saiu, os disparos seguintes não fazem nada.
     # Horários em UTC (Brasília = UTC-3):
     # Em 25-29/10 os disparos da manhã chegaram com ~6h de atraso. Por isso há
@@ -24,7 +24,7 @@ on:
         type: choice
         options: [teste, publicar]
       forcar:
-        description: "publicar mesmo fora das janelas 8-14h / 19-23h"
+        description: "publicar mesmo fora das janelas 8-14h / 18-24h"
         default: false
         type: boolean
 

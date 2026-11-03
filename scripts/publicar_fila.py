@@ -2,7 +2,7 @@
 
 Roda no GitHub Actions às ~9h e ~20h (horário de Brasília). Regras:
 - publica no máximo 1 story por execução;
-- prioridade: item "pendente" cujo horário já chegou (até 40 min de antecedência);
+- prioridade: item "pendente" cujo horário já chegou (até 2h de antecedência);
 - se não houver item para o horário, usa uma reserva (horario = null);
 - itens que perderam o horário há mais de 6h viram reserva (nada se perde);
 - se algo foi publicado nas últimas 3h, não publica de novo (evita duplicar).
@@ -83,9 +83,9 @@ def main():
                 and (datetime.fromisoformat(i["publicado_em"]) > agora - timedelta(hours=3)
                      or turno(datetime.fromisoformat(i["publicado_em"]).astimezone(SP)) == turno(agora))]
     pend = [i for i in itens if i["status"] == "pendente"]
-    devidos = sorted([i for i in pend if h(i) and h(i) <= agora + timedelta(minutes=60)], key=h)
+    devidos = sorted([i for i in pend if h(i) and h(i) <= agora + timedelta(minutes=120)], key=h)
     reservas = [i for i in pend if not h(i)]
-    futuros = [i for i in pend if h(i) and h(i) > agora + timedelta(minutes=60)]
+    futuros = [i for i in pend if h(i) and h(i) > agora + timedelta(minutes=120)]
 
     resumo = {"agora": agora.isoformat(timespec="minutes"), "devidos": len(devidos),
               "reservas": len(reservas), "agendados_futuros": len(futuros)}
@@ -99,10 +99,10 @@ def main():
         return 0
 
     # O GitHub às vezes dispara com horas de atraso. Fora das janelas da manhã
-    # (8h-14h) e da noite (19h-23h) não publica nada, para não sair story de madrugada.
-    if modo == "publicar" and not (8 <= agora.hour < 14 or 19 <= agora.hour < 23) \
+    # (8h-14h) e da noite (18h-23h59) não publica nada, para não sair story de madrugada.
+    if modo == "publicar" and not (8 <= agora.hour < 14 or agora.hour >= 18) \
             and not os.environ.get("FORCAR"):
-        print(json.dumps({**resumo, "acao": "nada (fora da janela 8-14h / 19-23h)"}, ensure_ascii=False))
+        print(json.dumps({**resumo, "acao": "nada (fora da janela 8-14h / 18-24h)"}, ensure_ascii=False))
         FILA.write_text(json.dumps(fila, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return 0
 
