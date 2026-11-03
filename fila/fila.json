@@ -277,14 +277,15 @@
     },
     {
       "id": "2026-11-02_20h_natal_3176140",
-      "horario": "2026-11-02T20:00:00-03:00",
+      "horario": null,
       "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-02_20h_natal_3176140.jpg",
       "tema": "natal",
       "titulo": "Árvore japandi",
       "model_id": "3176140",
       "link": "https://makerworld.com/en/models/3176140-christmas-tree-minimalistic-japandi-decor",
       "criador": "NowCraft3D",
-      "status": "pendente"
+      "status": "pendente",
+      "nota": "horário 2026-11-02T20:00:00-03:00 perdido; virou reserva"
     },
     {
       "id": "2026-11-03_09h_luminarias_2188163",
@@ -295,7 +296,9 @@
       "model_id": "2188163",
       "link": "https://makerworld.com/en/models/2188163-organic-ripple-lamp",
       "criador": "janberrydesign",
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "18146934061589059",
+      "publicado_em": "2026-11-03T09:43:22-03:00"
     },
     {
       "id": "2026-11-03_20h_natal_3330025",
