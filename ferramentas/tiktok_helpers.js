@@ -19,3 +19,13 @@ window.__F=async(cfg)=>{const sl=window.__sl, setv=window.__setv;
  if(cfg.noSubmit) return 'PRONTO (nao enviado)';
  const b=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Enviar para análise'); b.click(); await sl(6000); const t=document.body.innerText; return (t.match(/Produto enviado[^\n]*/)||['NAO ENVIADO'])[0]+' | '+(t.match(/Problemas críticos[\s\S]{0,160}/)||[''])[0];};
 'helpers ok'
+window.__V=async(name,opts)=>{const sl=window.__sl, setv=window.__setv;
+ const lab=[...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='Adicionar variações').pop(); let p=lab; for(let k=0;k<4;k++){p=p.parentElement; if(p.querySelector('button[role=switch],[class*=switch]')) break;} const sw=p.querySelector('button[role=switch],[class*=switch]'); sw.click(); await sl(1500);
+ const nl=[...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='Nome da variação').pop(); let nb=nl; for(let k=0;k<4;k++){nb=nb.parentElement; if(nb.querySelector('[class*=select]')) break;} const ns=nb.querySelector('[class*=select]'); ns.dispatchEvent(new MouseEvent('mousedown',{bubbles:true})); ns.click(); await sl(1200);
+ const o=[...document.querySelectorAll('[role=option],li,div')].filter(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()===name).pop();
+ if(o){o.click();} else {const an=[...document.querySelectorAll('*')].filter(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()==='Adicionar nova').pop(); an.click(); await sl(700); const ni=[...document.querySelectorAll('input')].filter(i=>i.offsetParent&&!i.value&&!i.placeholder).pop(); setv(ni,name); await sl(400); const ab=[...document.querySelectorAll('button')].filter(b=>b.offsetParent&&b.textContent.trim()==='Adicionar').pop(); ab.click();}
+ await sl(1200);
+ for(let i=0;i<opts.length;i++){ if(i>0){const ao=[...document.querySelectorAll('*')].filter(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()==='Adicionar opção').pop(); ao.click(); await sl(700);} const oi=[...document.querySelectorAll('input')].filter(x=>x.offsetParent&&/Insira uma opção|Adicionar outra opção/.test(x.placeholder||'')&&!x.value).pop(); setv(oi,opts[i]); await sl(500);}
+ document.body.click(); await sl(1500);
+ return [...document.querySelectorAll('tbody tr')].length+' linhas';};
+'v ok'
