@@ -8,6 +8,10 @@ on:
     - cron: "17 18 * * 0"   # 15h17
     - cron: "17 19 * * 0"   # 16h17
     - cron: "17 20 * * 0"   # 17h17
+    # Todos os dias de manhã: só age se houver story extra em "agendados" (produtos.json)
+    # para hoje e o story da manhã já tiver saído. O publicador da fila também
+    # dispara este workflow logo depois de rodar.
+    - cron: "47 12,13,14,15,16 * * *"   # 9h47 a 13h47
   workflow_dispatch:
     inputs:
       modo:

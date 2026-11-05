@@ -7,6 +7,9 @@ Roda no GitHub Actions aos domingos à tarde. Etapas (mesmo padrão do compartil
   python scripts/produto_semanal.py publicar  -> publica a imagem já enviada à branch `stories` e grava o histórico
 
 Produtos em fila/produtos.json (foto em stories:produtos/<id>.jpg). Histórico em fila/produtos_hist.json.
+Sem preço na arte (pedido do Thi, 05/11).
+Stories extras: lista "agendados" em produtos.json ({id, data}) sai logo após o story da manhã;
+não conta para o rodízio nem para o limite semanal.
 Variáveis: IG_ACCESS_TOKEN (segredo), IG_USER_ID, MODO=publicar|teste, FORCAR=1, URL_BASE.
 """
 import json
@@ -22,6 +25,7 @@ from publicar_fila import SP, publicar  # noqa: E402
 RAIZ = Path(__file__).resolve().parents[1]
 PRODUTOS = RAIZ / "fila" / "produtos.json"
 HIST = RAIZ / "fila" / "produtos_hist.json"
+FILA = RAIZ / "fila" / "fila.json"
 OUT = RAIZ / "out"
 JANELA = (14, 19)   # horas de Brasília
 DIA = 6             # domingo (segunda = 0)
@@ -37,17 +41,49 @@ def decidir():
     agora = datetime.now(SP)
     hist = ler_hist()
     semana = agora.isocalendar()[:2]
-    ja = any(tuple(datetime.fromisoformat(i["em"]).isocalendar()[:2]) == tuple(semana) for i in hist["itens"])
+    ja = any(tuple(datetime.fromisoformat(i["em"]).isocalendar()[:2]) == tuple(semana)
+             for i in hist["itens"] if not i.get("extra"))
     resumo = {"agora": agora.isoformat(timespec="minutes"), "domingo": agora.weekday() == DIA,
               "na_janela": JANELA[0] <= agora.hour < JANELA[1], "ja_postou_semana": ja, "forcar": forcar}
+    ag = agendado_hoje(agora, hist)
+    if ag:
+        resumo["agendado"] = ag
+        return True, resumo
     return forcar or (resumo["domingo"] and resumo["na_janela"] and not ja), resumo
+
+
+def manha_publicada(agora):
+    """O story da manhã (fila do MakerWorld) já saiu hoje?"""
+    fila = json.loads(FILA.read_text(encoding="utf-8"))["itens"]
+    for i in fila:
+        if i.get("status") == "publicado" and i.get("publicado_em"):
+            d = datetime.fromisoformat(i["publicado_em"]).astimezone(SP)
+            if d.date() == agora.date() and d.hour < 16:
+                return True
+    return False
+
+
+def agendado_hoje(agora, hist):
+    """Story extra agendado em produtos.json ("agendados"): sai logo depois do story da manhã.
+    Se a manhã não sair, publica assim mesmo a partir das 14h. Nunca depois das 18h."""
+    lista = json.loads(PRODUTOS.read_text(encoding="utf-8")).get("agendados", [])
+    feitos = {(i["id"], i.get("agendado")) for i in hist["itens"] if i.get("extra")}
+    for a in lista:
+        if a["data"] != agora.date().isoformat() or (a["id"], a["data"]) in feitos:
+            continue
+        if not (8 <= agora.hour < 18):
+            continue
+        if manha_publicada(agora) or agora.hour >= 14:
+            return a
+    return None
 
 
 def proximo(hist):
     lista = json.loads(PRODUTOS.read_text(encoding="utf-8"))["produtos"]
-    if not hist["itens"]:
+    normais = [i for i in hist["itens"] if not i.get("extra")]
+    if not normais:
         return lista[0]
-    ultimo = hist["itens"][-1]["id"]
+    ultimo = normais[-1]["id"]
     ids = [p["id"] for p in lista]
     i = (ids.index(ultimo) + 1) % len(lista) if ultimo in ids else 0
     return lista[i]
@@ -61,7 +97,7 @@ def gerar_arte(p):
     with urllib.request.urlopen(req, timeout=60) as r:
         foto.write_bytes(r.read())
     campos = {"kicker": "Na nossa loja", "titulo": p["titulo"],
-              "legenda": f'{p["legenda"]}<br><b>{p["preco"]}</b>',
+              "legenda": p["legenda"],  # sem preço (decisão do Thi, 05/11)
               "cta": "Procure useled3d na Shopee", "imagem": foto.resolve().as_uri()}
     tpl = (RAIZ / "arte" / "story_feed.html").read_text(encoding="utf-8")
     for k, v in campos.items():
@@ -94,11 +130,20 @@ def etapa_gerar():
     ok, resumo = decidir()
     if not ok:
         print(json.dumps({**resumo, "acao": "nada"}, ensure_ascii=False)); return 0
-    p = proximo(ler_hist())
+    hist = ler_hist()
+    ag = resumo.get("agendado")
+    if ag:
+        lista = json.loads(PRODUTOS.read_text(encoding="utf-8"))["produtos"]
+        p = next(x for x in lista if x["id"] == ag["id"])
+    else:
+        p = proximo(hist)
     gerar_arte(p)
     agora = datetime.now(SP)
     nome = f"produtos/stories/{'teste_' if modo != 'publicar' else ''}{agora:%Y-%m-%d}_{p['id']}.jpg"
     esc = {"id": p["id"], "arquivo": nome, "modo": modo}
+    if ag:
+        esc["agendado"] = ag["data"]
+        esc["arquivo"] = nome.replace(".jpg", "_extra.jpg")
     (OUT / "escolha.json").write_text(json.dumps(esc, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({**resumo, "acao": "arte gerada", **esc}, ensure_ascii=False))
     return 0
@@ -114,8 +159,11 @@ def etapa_publicar():
     url = os.environ["URL_BASE"].rstrip("/") + "/" + esc["arquivo"]
     res = publicar(url)
     hist = ler_hist()
-    hist["itens"].append({"id": esc["id"], "em": datetime.now(SP).isoformat(timespec="seconds"),
-                          "story_id": res["media_id"], "imagem": url})
+    item = {"id": esc["id"], "em": datetime.now(SP).isoformat(timespec="seconds"),
+            "story_id": res["media_id"], "imagem": url}
+    if esc.get("agendado"):
+        item.update(extra=True, agendado=esc["agendado"])
+    hist["itens"].append(item)
     HIST.write_text(json.dumps(hist, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"acao": "publicado", **esc, "story_id": res["media_id"]}, ensure_ascii=False))
     return 0

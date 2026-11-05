@@ -30,6 +30,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # para disparar o story extra de produto logo após o da manhã
 
 concurrency:
   group: publicar-story
@@ -61,3 +62,12 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add fila/fila.json
           git diff --cached --quiet || (git commit -m "Fila: status após execução $(date -u +%FT%TZ)" && git pull --rebase && git push)
+
+      - name: Story extra de produto agendado para hoje?
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if python -c "import json,datetime,zoneinfo,sys; h=datetime.datetime.now(zoneinfo.ZoneInfo('America/Sao_Paulo')).date().isoformat(); a=json.load(open('fila/produtos.json')).get('agendados',[]); sys.exit(0 if any(x['data']==h for x in a) else 1)"; then
+            gh workflow run produto-semanal.yml --ref main -f modo=publicar && echo "story de produto disparado"
+          fi
