@@ -21,7 +21,7 @@ window.__F=async(cfg)=>{const sl=window.__sl, setv=window.__setv;
 'helpers ok'
 window.__V=async(name,opts)=>{const sl=window.__sl, setv=window.__setv;
  const sw=document.querySelector('#publish_enable_variation button.core-switch'); if(sw.getAttribute('aria-checked')!=='true'){sw.click(); await sl(1500);}
- const nl=[...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='Nome da variação').pop(); let nb=nl; for(let k=0;k<4;k++){nb=nb.parentElement; if(nb.querySelector('[class*=select]')) break;} const ns=nb.querySelector('[class*=select]'); ns.dispatchEvent(new MouseEvent('mousedown',{bubbles:true})); ns.click(); await sl(1200);
+ const nl=[...document.querySelectorAll('*')].filter(e=>e.children.length===0&&e.textContent.trim()==='Nome da variação'&&!e.closest('th')).shift(); let nb=nl; for(let k=0;k<4;k++){nb=nb.parentElement; if(nb.querySelector('[class*=select]')) break;} const ns=nb.querySelector('[class*=select]'); ns.dispatchEvent(new MouseEvent('mousedown',{bubbles:true})); ns.click(); await sl(1200);
  const o=[...document.querySelectorAll('[role=option],li,div')].filter(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()===name).pop();
  if(o){o.click();} else {const an=[...document.querySelectorAll('*')].filter(e=>e.offsetParent&&e.children.length===0&&e.textContent.trim()==='Adicionar nova').pop(); an.click(); await sl(700); const ni=[...document.querySelectorAll('input')].filter(i=>i.offsetParent&&!i.value&&!i.placeholder).pop(); setv(ni,name); await sl(400); const ab=[...document.querySelectorAll('button')].filter(b=>b.offsetParent&&b.textContent.trim()==='Adicionar').pop(); ab.click();}
  await sl(1200);
