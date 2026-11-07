@@ -49,8 +49,16 @@ def publicar(url_imagem: str) -> dict:
         time.sleep(4)
     else:
         raise RuntimeError(f"container {cid} não ficou pronto")
-    mid = chamar("POST", f"{API}/{uid}/media_publish", creation_id=cid)["id"]
-    return {"media_id": mid}
+    # A API às vezes responde "Media ID is not available" (9007) mesmo com o
+    # container FINISHED: espera e tenta de novo antes de desistir.
+    for tentativa in range(6):
+        try:
+            mid = chamar("POST", f"{API}/{uid}/media_publish", creation_id=cid)["id"]
+            return {"media_id": mid}
+        except RuntimeError as e:
+            if "9007" not in str(e) and "not ready" not in str(e) or tentativa == 5:
+                raise
+            time.sleep(10 * (tentativa + 1))
 
 
 def url_ok(url: str) -> bool:
@@ -114,7 +122,8 @@ def main():
     item = devidos[0] if devidos else (reservas[0] if reservas else None)
     if not item:
         print(json.dumps({**resumo, "acao": "SEM STORY PARA ESTE HORÁRIO (fila vazia e sem reservas)"}, ensure_ascii=False))
-        return 1
+        print("::warning::Fila de stories vazia e sem reservas. Rodar a rotina de estoque.")
+        return 0  # fila vazia não é erro do workflow (evita e-mail de falha)
 
     erro = None
     for tentativa in (1, 2):

@@ -60,8 +60,8 @@
   "agendados": [
     {
       "id": "58218531411",
-      "data": "2026-11-06",
-      "motivo": "repostar o 1º story (o de 01/11 foi apagado por mostrar preço)"
+      "data": "2026-11-07",
+      "motivo": "repostar o 1º story (o de 01/11 foi apagado por mostrar preço); a tentativa de 06/11 falhou na API"
     }
   ]
 }
