@@ -357,6 +357,72 @@
       "status": "publicado",
       "media_id": "18112019123616794",
       "publicado_em": "2026-11-05T10:02:47-03:00"
+    },
+    {
+      "id": "2026-11-07_20h_natal_3319568",
+      "horario": "2026-11-07T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-07_20h_natal_3319568.jpg",
+      "tema": "natal",
+      "titulo": "Mini Jesus sentado",
+      "model_id": "3319568",
+      "link": "https://makerworld.com/en/models/3319568-mini-jesus-sentado",
+      "criador": "MeshBeeLab_3D",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-08_09h_luminarias_3113089",
+      "horario": "2026-11-08T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-08_09h_luminarias_3113089.jpg",
+      "tema": "luminarias",
+      "titulo": "Lampião de estante",
+      "model_id": "3113089",
+      "link": "https://makerworld.com/en/models/3113089-library-lantern-bookshelf-lamp-with-stand",
+      "criador": "tonvw",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-08_20h_natal_3381672",
+      "horario": "2026-11-08T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-08_20h_natal_3381672.jpg",
+      "tema": "natal",
+      "titulo": "Árvore de Natal iluminada",
+      "model_id": "3381672",
+      "link": "https://makerworld.com/en/models/3381672-christmas-tree-for-bambu-lab-led-kit",
+      "criador": "user_3157446986",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-09_09h_decor_3127422",
+      "horario": "2026-11-09T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-09_09h_decor_3127422.jpg",
+      "tema": "decor",
+      "titulo": "Vaso canelado japandi",
+      "model_id": "3127422",
+      "link": "https://makerworld.com/en/models/3127422-japandi-fluted-smart-pot-water-level-indicator",
+      "criador": "S.Corp",
+      "status": "pendente"
+    },
+    {
+      "id": "reserva_luminarias_3231232",
+      "horario": null,
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/reserva_luminarias_3231232.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária foguete",
+      "model_id": "3231232",
+      "link": "https://makerworld.com/en/models/3231232-rocket-launch-lamp-no-ams",
+      "criador": "BoostLab3D",
+      "status": "pendente"
+    },
+    {
+      "id": "reserva_literatura_1195415",
+      "horario": null,
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/reserva_literatura_1195415.jpg",
+      "tema": "literatura",
+      "titulo": "Marcador A Grande Onda",
+      "model_id": "1195415",
+      "link": "https://makerworld.com/en/models/1195415-the-great-wave-framed-bookmark",
+      "criador": "zhakryuu",
+      "status": "pendente"
     }
   ]
 }
