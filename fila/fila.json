@@ -433,6 +433,83 @@
       "link": "https://makerworld.com/en/models/1195415-the-great-wave-framed-bookmark",
       "criador": "zhakryuu",
       "status": "pendente"
+    },
+    {
+      "id": "2026-11-09_20h_natal_3338545",
+      "horario": "2026-11-09T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-09_20h_natal_3338545.jpg",
+      "tema": "natal",
+      "titulo": "Árvore de Natal espiral",
+      "model_id": "3338545",
+      "link": "https://makerworld.com/en/models/3338545-christmas-tree-minimalistic-decor-no-supports-art",
+      "criador": "NowCraft3D",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-10_09h_literatura_2867937",
+      "horario": "2026-11-10T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-10_09h_literatura_2867937.jpg",
+      "tema": "literatura",
+      "titulo": "Mini biblioteca",
+      "model_id": "2867937",
+      "link": "https://makerworld.com/en/models/2867937-mini-books-the-tiny-library",
+      "criador": "mangoes_matcha",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-10_20h_luminarias_2770318",
+      "horario": "2026-11-10T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-10_20h_luminarias_2770318.jpg",
+      "tema": "luminarias",
+      "titulo": "Casinha cogumelo",
+      "model_id": "2770318",
+      "link": "https://makerworld.com/en/models/2770318-fairy-mushroom-lamp",
+      "criador": "vaclav.klich",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-11_09h_decor_2867445",
+      "horario": "2026-11-11T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-11_09h_decor_2867445.jpg",
+      "tema": "decor",
+      "titulo": "Vaso seda franzida",
+      "model_id": "2867445",
+      "link": "https://makerworld.com/en/models/2867445-crinkled-silk-large-vase",
+      "criador": "user_1850721599",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-11_20h_natal_3435320",
+      "horario": "2026-11-11T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-11_20h_natal_3435320.jpg",
+      "tema": "natal",
+      "titulo": "Presépio na estrela",
+      "model_id": "3435320",
+      "link": "https://makerworld.com/en/models/3435320-wood-carved-nativity-scene-christmas-star",
+      "criador": "vaclav.klich",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-12_09h_luminarias_2932527",
+      "horario": "2026-11-12T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-12_09h_luminarias_2932527.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária peixe-abissal",
+      "model_id": "2932527",
+      "link": "https://makerworld.com/en/models/2932527-anglerfish-glow-lantern-deep-sea-led-light",
+      "criador": "vaclav.klich",
+      "status": "pendente"
+    },
+    {
+      "id": "reserva_literatura_2823261",
+      "horario": null,
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/reserva_literatura_2823261.jpg",
+      "tema": "literatura",
+      "titulo": "Marcadores florais",
+      "model_id": "2823261",
+      "link": "https://makerworld.com/en/models/2823261-floral-paperclip-bookmarks-cute-flower-set",
+      "criador": "Margo_t",
+      "status": "pendente"
     }
   ]
 }
