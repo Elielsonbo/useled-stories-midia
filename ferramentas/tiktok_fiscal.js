@@ -13,14 +13,14 @@ window.__fiscal=async(submit)=>{
  setv(inp('NCM'),'39249000'); await sl(400);
  setv(inp('Código de Situação Tributária do PIS e COFINS'),'49'); await sl(400);
  log.push(await choose('Natureza da operação','Vendas (pedidos padrão)')); await sl(800);
- const c1=inp('CFOP para intraestaduais'), c2=inp('CFOP para interestaduais'); if(c1) setv(c1,'5101'); if(c2) setv(c2,'6101'); log.push('cfop:'+(!!c1&&!!c2)); await sl(400);
+ const c1=inp('CFOP para intraestaduais'), c2=inp('CFOP para interestaduais'); if(c1) setv(c1,'5102'); if(c2) setv(c2,'6102'); log.push('cfop:'+(!!c1&&!!c2)); await sl(400);
  log.push(await choose('CSOSN','102/'));
  log.push(await choose('Origem','0/'));
  log.push(await choose('Unidade de medida','UN'));
  await sl(800);
  const chk={ncm:inp('NCM')?.value,cst:inp('Código de Situação Tributária do PIS e COFINS')?.value,c1:c1?.value,c2:c2?.value};
  log.push(JSON.stringify(chk));
- if(submit){const bt=[...document.querySelectorAll('button')].find(b=>b.offsetParent&&b.textContent.trim()==='Atualizar'); if(!bt) return log.join(' | ')+' | SEM BOTAO'; bt.click(); for(let k=0;k<20;k++){await sl(700); if(!/\/product\/edit\//.test(location.href)||/experience listing/.test(document.body.innerText)) break;} const err=[...document.querySelectorAll('[class*=error],[class*=Error]')].filter(e=>e.offsetParent).map(e=>e.innerText.trim()).filter(Boolean).slice(0,3); log.push(/experience listing|produtos em alta/.test(document.body.innerText)?'SALVO':'?? '+err.join('/'));}
+ if(submit){const bt=[...document.querySelectorAll('button')].find(b=>b.offsetParent&&b.textContent.trim()==='Atualizar'); if(!bt) return log.join(' | ')+' | SEM BOTAO'; bt.click(); for(let k=0;k<20;k++){await sl(700); if(!/\/product\/edit\//.test(location.href)||/experience listing/.test(document.body.innerText)) break;} const err=[...document.querySelectorAll('[class*=error],[class*=Error]')].filter(e=>e.offsetParent).map(e=>e.innerText.trim()).filter(Boolean).slice(0,3); log.push(/experience listing|produtos em alta|Atualizado com sucesso/.test(document.body.innerText)?'SALVO':'?? '+err.join('/'));}
  return log.join(' | ');
 };
 'fiscal ok'
