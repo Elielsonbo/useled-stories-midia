@@ -626,6 +626,72 @@
       "status": "publicado",
       "media_id": "18149415334600654",
       "publicado_em": "2026-11-16T10:30:48-03:00"
+    },
+    {
+      "id": "2026-11-16_20h_luminarias_2460485",
+      "horario": "2026-11-16T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-16_20h_luminarias_2460485.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária WaveGlow",
+      "model_id": "2460485",
+      "link": "https://makerworld.com/en/models/2460485-waveglow-parametric-lamp-with-modular-base",
+      "criador": "Tom973",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-17_09h_natal_1957687",
+      "horario": "2026-11-17T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-17_09h_natal_1957687.jpg",
+      "tema": "natal",
+      "titulo": "Pinheirinhos facetados",
+      "model_id": "1957687",
+      "link": "https://makerworld.com/en/models/1957687-modern-christmas-tree-decor",
+      "criador": "janberrydesign",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-17_20h_decor_3127422",
+      "horario": "2026-11-17T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-17_20h_decor_3127422.jpg",
+      "tema": "decor",
+      "titulo": "Vaso Japandi",
+      "model_id": "3127422",
+      "link": "https://makerworld.com/en/models/3127422-japandi-fluted-smart-pot-water-level-indicator",
+      "criador": "S.Corp",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-18_09h_literatura_2505835",
+      "horario": "2026-11-18T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-18_09h_literatura_2505835.jpg",
+      "tema": "literatura",
+      "titulo": "Marcador dragão",
+      "model_id": "2505835",
+      "link": "https://makerworld.com/en/models/2505835-peeking-baby-dragon-bookmark-ams-ready",
+      "criador": "Lynns",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-18_20h_natal_2072645",
+      "horario": "2026-11-18T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-18_20h_natal_2072645.jpg",
+      "tema": "natal",
+      "titulo": "Bolas de Natal vazadas",
+      "model_id": "2072645",
+      "link": "https://makerworld.com/en/models/2072645-thermoformed-christmas-baubles",
+      "criador": "mihai_t",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-19_09h_luminarias_2743950",
+      "horario": "2026-11-19T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-19_09h_luminarias_2743950.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária de fada",
+      "model_id": "2743950",
+      "link": "https://makerworld.com/en/models/2743950-fairy-night-light-cute-fairy-lamp",
+      "criador": "vaclav.klich",
+      "status": "pendente"
     }
   ]
 }
