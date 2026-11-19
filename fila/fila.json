@@ -704,6 +704,94 @@
       "status": "publicado",
       "media_id": "18136161778738656",
       "publicado_em": "2026-11-19T11:17:08-03:00"
+    },
+    {
+      "id": "2026-11-19_20h_natal_3502884",
+      "horario": "2026-11-19T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-19_20h_natal_3502884.jpg",
+      "tema": "natal",
+      "titulo": "Pinheirinhos de luz",
+      "model_id": "3502884",
+      "link": "https://makerworld.com/en/models/3502884-christmas-tree-led-tealight-holders-4-designs",
+      "criador": "Vaporone",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-20_09h_decor_3335373",
+      "horario": "2026-11-20T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-20_09h_decor_3335373.jpg",
+      "tema": "decor",
+      "titulo": "Vaso de tricô aconchegante",
+      "model_id": "3335373",
+      "link": "https://makerworld.com/en/models/3335373-knitted-style-vase-cozy-decorative-flower-vase",
+      "criador": "vaclav.klich",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-20_20h_luminarias_2386785",
+      "horario": "2026-11-20T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-20_20h_luminarias_2386785.jpg",
+      "tema": "luminarias",
+      "titulo": "Casinha da floresta iluminada",
+      "model_id": "2386785",
+      "link": "https://makerworld.com/en/models/2386785-cozy-woodland-cottage-led-tealight-house",
+      "criador": "Ligurio",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-21_09h_natal_2103225",
+      "horario": "2026-11-21T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-21_09h_natal_2103225.jpg",
+      "tema": "natal",
+      "titulo": "Papai Noel de tricô",
+      "model_id": "2103225",
+      "link": "https://makerworld.com/en/models/2103225-knitted-santa-claus-christmas",
+      "criador": "Smoggy3D",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-21_20h_literatura_1769040",
+      "horario": "2026-11-21T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-21_20h_literatura_1769040.jpg",
+      "tema": "literatura",
+      "titulo": "Poste de Hogwarts que acende",
+      "model_id": "1769040",
+      "link": "https://makerworld.com/en/models/1769040-harry-potter-street-lamp-no-ams-needed",
+      "criador": "Makermagic",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-22_09h_decor_2495681",
+      "horario": "2026-11-22T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-22_09h_decor_2495681.jpg",
+      "tema": "decor",
+      "titulo": "Bandeja canelada japandi",
+      "model_id": "2495681",
+      "link": "https://makerworld.com/en/models/2495681-plate-tray-oval-bowl-contour-v5-japandi-design",
+      "criador": "Dekora_3D",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-22_20h_natal_3402013",
+      "horario": "2026-11-22T20:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-22_20h_natal_3402013.jpg",
+      "tema": "natal",
+      "titulo": "Presépio em arco de luz",
+      "model_id": "3402013",
+      "link": "https://makerworld.com/en/models/3402013-lighted-nativity-arch",
+      "criador": "user_1188940058",
+      "status": "pendente"
+    },
+    {
+      "id": "2026-11-23_09h_luminarias_1871775",
+      "horario": "2026-11-23T09:00:00-03:00",
+      "url": "https://raw.githubusercontent.com/Elielsonbo/useled-stories-midia/stories/2026/11/2026-11-23_09h_luminarias_1871775.jpg",
+      "tema": "luminarias",
+      "titulo": "Luminária origami de mesa",
+      "model_id": "1871775",
+      "link": "https://makerworld.com/en/models/1871775-table-tealight-lamp-set-2",
+      "criador": "3D_Fun_Factory",
+      "status": "pendente"
     }
   ]
 }
