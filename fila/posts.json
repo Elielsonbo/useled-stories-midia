@@ -1,0 +1,80 @@
+{
+  "sha_midia": "f4919558b618f852d66494eb4890e5e325a86224",
+  "itens": [
+    {
+      "id": "bw_20_abertura_carrossel",
+      "horario": "2026-11-20T18:00:00-03:00",
+      "ate": "2026-11-20T23:59:00-03:00",
+      "tipo": "carrossel",
+      "midias": [
+        "blackweek/posts/abertura_1_luminarias.jpg",
+        "blackweek/posts/abertura_2_brindes.jpg",
+        "blackweek/posts/abertura_3_calendario.jpg"
+      ],
+      "legenda": "BLACK WEEK USE LED 🧡\n\nA partir de amanhã (21/11) até a Black Friday (27/11), uma luminária por dia com 20% OFF no site. São 7 dias e 7 luminárias, e cada uma só é revelada no dia dela, aqui no perfil.\n\nNa Black Friday ainda tem novidade: uma luminária nova chega à coleção ✦\n\nE tem brinde: toda luminária comprada no site até 27/11, com ou sem desconto, ganha um mimo à sua escolha: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAtive as notificações para não perder a luz do dia.\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #decoracao #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_20_story_grade_animada",
+      "horario": "2026-11-20T18:05:00-03:00",
+      "ate": "2026-11-20T23:59:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/story_abertura_grade_animada.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_20_story_calendario",
+      "horario": "2026-11-20T19:00:00-03:00",
+      "ate": "2026-11-20T23:59:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/story_calendario.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_21_aurora_reels",
+      "horario": "2026-11-21T09:00:00-03:00",
+      "ate": "2026-11-21T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d1_aurora_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d1_aurora_reels_capa.jpg",
+      "legenda": "BLACK WEEK · DIA 1/7 🧡\n\nA luz de hoje é a Luminária Aurora.\n\nCúpula canelada que filtra a luz como um abajur de vidro, mas leve e impressa em 3D. Lâmpada LED inclusa.\n\nSó hoje, no site: de R$ 274,90 por R$ 219,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariaaurora #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_21_aurora_story_revelacao",
+      "horario": "2026-11-21T09:05:00-03:00",
+      "ate": "2026-11-21T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d1_aurora_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_21_aurora_story_reels",
+      "horario": "2026-11-21T09:10:00-03:00",
+      "ate": "2026-11-21T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d1_aurora_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_21_aurora_story_ultimas_horas",
+      "horario": "2026-11-21T20:00:00-03:00",
+      "ate": "2026-11-21T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d1_aurora_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
+    }
+  ]
+}

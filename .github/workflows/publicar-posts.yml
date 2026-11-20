@@ -1,0 +1,68 @@
+name: Publicar posts agendados
+
+on:
+  push:
+    branches: [main]
+    paths: ["fila/posts.json", "fila/gatilho_posts.txt"]
+  schedule:
+    # Reserva: o disparo principal é por push (gatilho_posts.txt) pouco antes de cada horário.
+    # O script só publica o que já está no horário (até 4h de atraso) e espera até 5h30 pelo próximo.
+    - cron: "41 * * * *"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "publicar | teste (cria containers sem publicar)"
+        default: teste
+        type: choice
+        options: [teste, publicar]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-posts
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Usar a versão mais nova da fila
+        run: git fetch origin main && git reset --hard origin/main
+
+      - name: Há algo pendente?
+        id: pend
+        run: |
+          python3 -c "import json,sys; f=json.load(open('fila/posts.json')); sys.exit(0 if any(i['status']=='pendente' for i in f['itens']) else 1)" && echo "seguir=1" >> "$GITHUB_OUTPUT" || echo "nada pendente"
+
+      - name: Commit das mídias
+        if: steps.pend.outputs.seguir == '1'
+        id: sha
+        run: echo "sha=$(python3 -c "import json;print(json.load(open('fila/posts.json'))['sha_midia'])")" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.pend.outputs.seguir == '1'
+        with:
+          ref: ${{ steps.sha.outputs.sha }}
+          path: _midia
+          sparse-checkout: blackweek
+
+      - name: Publicar
+        if: steps.pend.outputs.seguir == '1'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: "17841405843278969"
+          MODO: ${{ github.event.inputs.modo || (contains(github.event.head_commit.message, '[teste]') && 'teste') || 'publicar' }}
+          SHA_MIDIA: ${{ steps.sha.outputs.sha }}
+        run: python3 scripts/publicar_posts.py
+
+      - name: Salvar status
+        if: always() && steps.pend.outputs.seguir == '1'
+        run: |
+          git config user.name "useled-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fila/posts.json
+          git diff --cached --quiet || (git commit -m "Posts: status após execução $(date -u +%FT%TZ)" && git pull --rebase && git push)
