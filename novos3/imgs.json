@@ -1,0 +1,172 @@
+{
+ "dummy": {
+  "galeria": [
+   "dummy_0",
+   "dummy_1",
+   "dummy_2",
+   "dummy_3",
+   "dummy_4",
+   "dummy_5"
+  ],
+  "var": [
+   "dummy_v0",
+   "dummy_v1"
+  ]
+ },
+ "dacess": {
+  "galeria": [
+   "dacess_0",
+   "dacess_1",
+   "dacess_2",
+   "dacess_3",
+   "dacess_4",
+   "dacess_5",
+   "dacess_6",
+   "dacess_7",
+   "dacess_8"
+  ],
+  "var": [
+   "dacess_v0",
+   "dacess_v1",
+   "dacess_v2",
+   "dacess_v3",
+   "dacess_v4"
+  ]
+ },
+ "dinos": {
+  "galeria": [
+   "dinos_0",
+   "dinos_1",
+   "dinos_2",
+   "dinos_3",
+   "dinos_4",
+   "dinos_5",
+   "dinos_6"
+  ],
+  "var": [
+   "dinos_v0",
+   "dinos_v1",
+   "dinos_v2"
+  ]
+ },
+ "marinhos": {
+  "galeria": [
+   "marinhos_0",
+   "marinhos_1",
+   "marinhos_2",
+   "marinhos_3",
+   "marinhos_4",
+   "marinhos_5",
+   "marinhos_6",
+   "marinhos_7",
+   "marinhos_8"
+  ],
+  "var": [
+   "marinhos_v0",
+   "marinhos_v1",
+   "marinhos_v2",
+   "marinhos_v3",
+   "marinhos_v4",
+   "marinhos_v5",
+   "marinhos_v6"
+  ]
+ },
+ "nome": {
+  "galeria": [
+   "nome_0",
+   "nome_1",
+   "nome_2",
+   "nome_3",
+   "nome_4",
+   "nome_5"
+  ],
+  "var": []
+ },
+ "musica": {
+  "galeria": [
+   "musica_0",
+   "musica_1"
+  ],
+  "var": []
+ },
+ "nfc": {
+  "galeria": [
+   "nfc_0",
+   "nfc_1",
+   "nfc_2",
+   "nfc_3",
+   "nfc_4",
+   "nfc_5",
+   "nfc_6"
+  ],
+  "var": []
+ },
+ "pet": {
+  "galeria": [
+   "pet_0",
+   "pet_1",
+   "pet_2",
+   "pet_3",
+   "pet_4",
+   "pet_5",
+   "pet_6"
+  ],
+  "var": [
+   "pet_v0",
+   "pet_v1",
+   "pet_v2"
+  ]
+ },
+ "vasos": {
+  "galeria": [
+   "vasos_0",
+   "vasos_1",
+   "vasos_2",
+   "vasos_3",
+   "vasos_4",
+   "vasos_5",
+   "vasos_6",
+   "vasos_7",
+   "vasos_8"
+  ],
+  "var": [
+   "vasos_v0",
+   "vasos_v1",
+   "vasos_v2",
+   "vasos_v3",
+   "vasos_v4",
+   "vasos_v5",
+   "vasos_v6"
+  ]
+ },
+ "esculturais": {
+  "galeria": [
+   "esculturais_0",
+   "esculturais_1",
+   "esculturais_2",
+   "esculturais_3",
+   "esculturais_4",
+   "esculturais_5",
+   "esculturais_6",
+   "esculturais_7"
+  ],
+  "var": [
+   "esculturais_v0",
+   "esculturais_v1",
+   "esculturais_v2",
+   "esculturais_v3"
+  ]
+ },
+ "zen": {
+  "galeria": [
+   "zen_0",
+   "zen_1",
+   "zen_2",
+   "zen_3",
+   "zen_4",
+   "zen_5",
+   "zen_6"
+  ],
+  "var": []
+ }
+}
