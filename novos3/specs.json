@@ -230,17 +230,17 @@
  },
  {
   "key": "nome",
-  "titulo": "Chaveiro Com Nome Personalizado 3D Lembrancinha Kit 1, 5 ou 10 Unidades Duas Cores Presente",
+  "titulo": "Chaveiro Com Nome Personalizado 3D Lembrancinha Kit 1, 3 ou 5 Unidades Duas Cores Presente",
   "ml": "Chaveiro Com Nome Personalizado 3d Lembrancinha",
   "personal": true,
   "o_que": "o(s) nome(s) e as duas cores (letra e fundo)",
-  "desc": "Chaveiro com nome em relevo, em duas cores, impresso em 3D. Ótimo para mochila, chave, lembrancinha de festa, evento, escola ou brinde de empresa.\n\n✅ PERSONALIZADO: nome ou palavra de até 12 letras\n✅ MODELOS: Simples (contorno do nome) ou Com borda (até 2 linhas)\n✅ CORES: escolha a cor da letra e a do fundo\n✅ ACOMPANHA: argola de metal\n✅ TAMANHO: cerca de 6 a 8 cm\n✅ MATERIAL: bioplástico PLA\n✅ KITS: 1, 5 ou 10 unidades (cada uma com um nome diferente, se quiser)",
+  "desc": "Chaveiro com nome em relevo, em duas cores, impresso em 3D. Ótimo para mochila, chave, lembrancinha de festa, evento, escola ou brinde de empresa.\n\n✅ PERSONALIZADO: nome ou palavra de até 12 letras\n✅ MODELOS: Simples (contorno do nome) ou Com borda (até 2 linhas)\n✅ CORES: escolha a cor da letra e a do fundo\n✅ ACOMPANHA: argola de metal\n✅ TAMANHO: cerca de 6 a 8 cm\n✅ MATERIAL: bioplástico PLA\n✅ KITS: 1, 3 ou 5 unidades (cada uma com um nome diferente, se quiser)",
   "t1": [
    "Kit",
    [
     "1 unidade",
-    "Kit 5",
-    "Kit 10"
+    "Kit 3",
+    "Kit 5"
    ]
   ],
   "t2": [
@@ -252,14 +252,14 @@
   ],
   "preco": [
    16.9,
-   59.9,
-   99.9
+   39.9,
+   59.9
   ],
   "estoque": 20,
   "peso": [
    0.03,
-   0.08,
-   0.15
+   0.06,
+   0.08
   ],
   "dim": [
    [
@@ -279,7 +279,7 @@
    ]
   ],
   "cat": "chaveiro",
-  "desc_full": "Chaveiro com nome em relevo, em duas cores, impresso em 3D. Ótimo para mochila, chave, lembrancinha de festa, evento, escola ou brinde de empresa.\n\n✅ PERSONALIZADO: nome ou palavra de até 12 letras\n✅ MODELOS: Simples (contorno do nome) ou Com borda (até 2 linhas)\n✅ CORES: escolha a cor da letra e a do fundo\n✅ ACOMPANHA: argola de metal\n✅ TAMANHO: cerca de 6 a 8 cm\n✅ MATERIAL: bioplástico PLA\n✅ KITS: 1, 5 ou 10 unidades (cada uma com um nome diferente, se quiser)\n\nPERSONALIZAÇÃO\nDepois da compra, mande pelo chat o(s) nome(s) e as duas cores (letra e fundo). Produzimos e enviamos em até 3 dias úteis após a confirmação.\n\nOBSERVAÇÕES\nAs fotos são demonstrativas e as cores podem variar levemente conforme a tela."
+  "desc_full": "Chaveiro com nome em relevo, em duas cores, impresso em 3D. Ótimo para mochila, chave, lembrancinha de festa, evento, escola ou brinde de empresa.\n\n✅ PERSONALIZADO: nome ou palavra de até 12 letras\n✅ MODELOS: Simples (contorno do nome) ou Com borda (até 2 linhas)\n✅ CORES: escolha a cor da letra e a do fundo\n✅ ACOMPANHA: argola de metal\n✅ TAMANHO: cerca de 6 a 8 cm\n✅ MATERIAL: bioplástico PLA\n✅ KITS: 1, 3 ou 5 unidades (cada uma com um nome diferente, se quiser)\n\nPERSONALIZAÇÃO\nDepois da compra, mande pelo chat o(s) nome(s) e as duas cores (letra e fundo). Produzimos e enviamos em até 3 dias úteis após a confirmação.\n\nOBSERVAÇÕES\nAs fotos são demonstrativas e as cores podem variar levemente conforme a tela."
  },
  {
   "key": "musica",
@@ -440,7 +440,7 @@
    ]
   ],
   "preco": [
-   29.9,
+   34.9,
    39.9,
    59.9,
    69.9,
