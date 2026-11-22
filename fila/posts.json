@@ -100,7 +100,9 @@
       ],
       "capa": "blackweek/posts/d2_crepusculo_reels_capa.jpg",
       "legenda": "BLACK WEEK · DIA 2/7 🧡\n\nA luz de hoje é a Luminária Crepúsculo.\n\nO tom âmbar e os gomos verticais deixam qualquer canto com cara de fim de tarde.\n\nSó hoje, no site: de R$ 230,90 por R$ 183,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariacrepusculo #decoracao #decoracaodecasa #impressao3d #useled",
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "18118949087520418",
+      "publicado_em": "2026-11-22T10:24:35-03:00"
     },
     {
       "id": "bw_22_crepusculo_story_revelacao",
@@ -110,7 +112,9 @@
       "midias": [
         "blackweek/posts/d2_crepusculo_story1_revelacao.jpg"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "18080670047777634",
+      "publicado_em": "2026-11-22T10:29:13-03:00"
     },
     {
       "id": "bw_22_crepusculo_story_reels",
@@ -120,7 +124,10 @@
       "midias": [
         "blackweek/posts/d2_crepusculo_reels.mp4"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "tentativas": 1,
+      "media_id": "18650640883018638",
+      "publicado_em": "2026-11-22T10:35:43-03:00"
     },
     {
       "id": "bw_22_crepusculo_story_ultimas_horas",
