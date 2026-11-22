@@ -1,5 +1,5 @@
 {
-  "sha_midia": "f4919558b618f852d66494eb4890e5e325a86224",
+  "sha_midia": "d48daf0a89ececea1c82519b017cc8066492ca71",
   "itens": [
     {
       "id": "bw_20_abertura_carrossel",
@@ -89,6 +89,48 @@
       "status": "publicado",
       "media_id": "17937680634143988",
       "publicado_em": "2026-11-21T19:59:10-03:00"
+    },
+    {
+      "id": "bw_22_crepusculo_reels",
+      "horario": "2026-11-22T10:25:00-03:00",
+      "ate": "2026-11-22T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d2_crepusculo_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d2_crepusculo_reels_capa.jpg",
+      "legenda": "BLACK WEEK · DIA 2/7 🧡\n\nA luz de hoje é a Luminária Crepúsculo.\n\nO tom âmbar e os gomos verticais deixam qualquer canto com cara de fim de tarde.\n\nSó hoje, no site: de R$ 230,90 por R$ 183,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariacrepusculo #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_22_crepusculo_story_revelacao",
+      "horario": "2026-11-22T10:30:00-03:00",
+      "ate": "2026-11-22T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d2_crepusculo_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_22_crepusculo_story_reels",
+      "horario": "2026-11-22T10:35:00-03:00",
+      "ate": "2026-11-22T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d2_crepusculo_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_22_crepusculo_story_ultimas_horas",
+      "horario": "2026-11-22T20:00:00-03:00",
+      "ate": "2026-11-22T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d2_crepusculo_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
     }
   ]
 }
