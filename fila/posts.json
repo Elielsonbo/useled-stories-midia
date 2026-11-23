@@ -1,5 +1,5 @@
 {
-  "sha_midia": "d48daf0a89ececea1c82519b017cc8066492ca71",
+  "sha_midia": "3d21cdbda1aa9dcf3e74a0238806b27772a4a916",
   "itens": [
     {
       "id": "bw_20_abertura_carrossel",
@@ -140,6 +140,48 @@
       "status": "publicado",
       "media_id": "18039805013893481",
       "publicado_em": "2026-11-22T19:59:12-03:00"
+    },
+    {
+      "id": "bw_23_flutuante_reels",
+      "horario": "2026-11-23T10:25:00-03:00",
+      "ate": "2026-11-23T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d3_flutuante_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d3_flutuante_reels_capa.jpg",
+      "legenda": "BLACK WEEK · DIA 3/7 🧡\n\nA luz de hoje é a Luminária Luz Flutuante.\n\nSem fio, recarregável e com suporte de parede: acende com um toque e vai para onde você quiser.\n\nSó hoje, no site: de R$ 296,90 por R$ 236,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariaflutuante #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_23_flutuante_story_revelacao",
+      "horario": "2026-11-23T10:30:00-03:00",
+      "ate": "2026-11-23T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d3_flutuante_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_23_flutuante_story_reels",
+      "horario": "2026-11-23T10:35:00-03:00",
+      "ate": "2026-11-23T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d3_flutuante_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_23_flutuante_story_ultimas_horas",
+      "horario": "2026-11-23T20:00:00-03:00",
+      "ate": "2026-11-23T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d3_flutuante_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
     }
   ]
 }
