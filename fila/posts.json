@@ -187,7 +187,9 @@
       "midias": [
         "blackweek/posts/d3_flutuante_story2_ultimas_horas.jpg"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "17998518129065118",
+      "publicado_em": "2026-11-23T19:59:13-03:00"
     }
   ]
 }
