@@ -143,7 +143,7 @@
     },
     {
       "id": "bw_23_flutuante_reels",
-      "horario": "2026-11-23T10:25:00-03:00",
+      "horario": "2026-11-23T08:40:00-03:00",
       "ate": "2026-11-23T20:00:00-03:00",
       "tipo": "reels",
       "midias": [
@@ -155,7 +155,7 @@
     },
     {
       "id": "bw_23_flutuante_story_revelacao",
-      "horario": "2026-11-23T10:30:00-03:00",
+      "horario": "2026-11-23T08:41:00-03:00",
       "ate": "2026-11-23T20:00:00-03:00",
       "tipo": "story_imagem",
       "midias": [
@@ -165,7 +165,7 @@
     },
     {
       "id": "bw_23_flutuante_story_reels",
-      "horario": "2026-11-23T10:35:00-03:00",
+      "horario": "2026-11-23T08:42:00-03:00",
       "ate": "2026-11-23T20:00:00-03:00",
       "tipo": "story_video",
       "midias": [
