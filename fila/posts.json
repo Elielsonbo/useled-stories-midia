@@ -237,7 +237,9 @@
       "midias": [
         "blackweek/posts/d4_versos_story2_ultimas_horas.jpg"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "18112414205366060",
+      "publicado_em": "2026-11-24T20:13:25-03:00"
     }
   ]
 }
