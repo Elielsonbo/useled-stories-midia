@@ -1,5 +1,5 @@
 {
-  "sha_midia": "c45823d6267aa7a252ee5ec0c082b7e77246a1cd",
+  "sha_midia": "ea26b1c9a922c5b8ceb392948e2975181eaca60b",
   "itens": [
     {
       "id": "bw_20_abertura_carrossel",
@@ -240,6 +240,48 @@
       "status": "publicado",
       "media_id": "18112414205366060",
       "publicado_em": "2026-11-24T20:13:25-03:00"
+    },
+    {
+      "id": "bw_25_gomo_reels",
+      "horario": "2026-11-25T10:36:00-03:00",
+      "ate": "2026-11-25T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d5_gomo_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d5_gomo_reels_capa.jpg",
+      "legenda": "BLACK WEEK · DIA 5/7 🧡\n\nA luz de hoje é a Luminária Gomo.\n\nGomos texturizados que espalham uma luz macia, perfeita para a mesa de cabeceira. Em amarelo, laranja, verde oliva ou marrom.\n\nSó hoje, no site: de R$ 219,90 por R$ 175,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariagomo #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_25_gomo_story_revelacao",
+      "horario": "2026-11-25T10:37:00-03:00",
+      "ate": "2026-11-25T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d5_gomo_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_25_gomo_story_reels",
+      "horario": "2026-11-25T10:38:00-03:00",
+      "ate": "2026-11-25T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d5_gomo_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_25_gomo_story_ultimas_horas",
+      "horario": "2026-11-25T20:00:00-03:00",
+      "ate": "2026-11-25T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d5_gomo_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
     }
   ]
 }
