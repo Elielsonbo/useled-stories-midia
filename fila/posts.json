@@ -1,5 +1,5 @@
 {
-  "sha_midia": "b201a76be161191e387f4509c363aac09b67bd0e",
+  "sha_midia": "17b6ea86ff7b8c15b71d74d4ceedaf8da95c9936",
   "itens": [
     {
       "id": "bw_20_abertura_carrossel",
@@ -310,6 +310,90 @@
       ],
       "status": "pendente",
       "link": "https://makerworld.com/pt/models/3573359"
+    },
+    {
+      "id": "bw_26_lampion_reels",
+      "horario": "2026-11-26T10:25:00-03:00",
+      "ate": "2026-11-26T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d6_lampion_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d6_lampion_reels_capa.jpg",
+      "legenda": "BLACK WEEK · DIA 6/7 🧡\n\nA luz de hoje é a Luminária Lampion.\n\nCúpula canelada e pé cilíndrico: um abajur de mesa que aquece o ambiente. Lâmpada inclusa.\n\nSó hoje, no site: de R$ 219,90 por R$ 175,90 (20% OFF, até 23h59).\n\n+ brinde à sua escolha em toda luminária comprada no site até 27/11: kit de suportes de foto, vasinho canelado ou porta-copos Monstera.\n\nAmanhã tem outra luz. Ative as notificações ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminarialampion #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_26_lampion_story_revelacao",
+      "horario": "2026-11-26T10:30:00-03:00",
+      "ate": "2026-11-26T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d6_lampion_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_26_lampion_story_reels",
+      "horario": "2026-11-26T10:35:00-03:00",
+      "ate": "2026-11-26T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d6_lampion_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_26_lampion_story_ultimas_horas",
+      "horario": "2026-11-26T20:00:00-03:00",
+      "ate": "2026-11-26T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d6_lampion_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_27_cogumelo_reels",
+      "horario": "2026-11-27T10:25:00-03:00",
+      "ate": "2026-11-27T20:00:00-03:00",
+      "tipo": "reels",
+      "midias": [
+        "blackweek/posts/d7_cogumelo_reels.mp4"
+      ],
+      "capa": "blackweek/posts/d7_cogumelo_reels_capa.jpg",
+      "legenda": "LANÇAMENTO + BLACK FRIDAY 🖤\n\nA última luz da Black Week é novidade: chegou a Luminária Cogumelo.\n\nCúpula canelada, base preta ou branca e uma luz quente e suave. É a mais nova da coleção, e estreia já com desconto.\n\nSó hoje, no site: de R$ 219,90 por R$ 175,90 (20% OFF).\n\nE hoje é o último dia do brinde: toda luminária comprada no site até 23h59 ganha um mimo à sua escolha (kit de suportes de foto, vasinho canelado ou porta-copos Monstera).\n\nObrigado por iluminar essa semana com a gente ✦\nLink na bio.\n\n#blackweek #blackfriday #luminaria #luminariadecorativa #luminariacogumelo #decoracao #decoracaodecasa #impressao3d #useled",
+      "status": "pendente"
+    },
+    {
+      "id": "bw_27_cogumelo_story_revelacao",
+      "horario": "2026-11-27T10:30:00-03:00",
+      "ate": "2026-11-27T20:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d7_cogumelo_story1_revelacao.jpg"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_27_cogumelo_story_reels",
+      "horario": "2026-11-27T10:35:00-03:00",
+      "ate": "2026-11-27T20:00:00-03:00",
+      "tipo": "story_video",
+      "midias": [
+        "blackweek/posts/d7_cogumelo_reels.mp4"
+      ],
+      "status": "pendente"
+    },
+    {
+      "id": "bw_27_cogumelo_story_ultimas_horas",
+      "horario": "2026-11-27T20:00:00-03:00",
+      "ate": "2026-11-27T23:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "blackweek/posts/d7_cogumelo_story2_ultimas_horas.jpg"
+      ],
+      "status": "pendente"
     }
   ]
 }
