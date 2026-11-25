@@ -1,5 +1,5 @@
 {
-  "sha_midia": "ea26b1c9a922c5b8ceb392948e2975181eaca60b",
+  "sha_midia": "b201a76be161191e387f4509c363aac09b67bd0e",
   "itens": [
     {
       "id": "bw_20_abertura_carrossel",
@@ -288,6 +288,28 @@
         "blackweek/posts/d5_gomo_story2_ultimas_horas.jpg"
       ],
       "status": "pendente"
+    },
+    {
+      "id": "gta_25_suporte_controle",
+      "horario": "2026-11-25T13:00:00-03:00",
+      "ate": "2026-11-25T18:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "2026/11/2026-11-25_13h_games_3583443.jpg"
+      ],
+      "status": "pendente",
+      "link": "https://makerworld.com/pt/models/3583443"
+    },
+    {
+      "id": "gta_26_luminaria_neon",
+      "horario": "2026-11-26T13:00:00-03:00",
+      "ate": "2026-11-26T18:00:00-03:00",
+      "tipo": "story_imagem",
+      "midias": [
+        "2026/11/2026-11-26_13h_games_3573359.jpg"
+      ],
+      "status": "pendente",
+      "link": "https://makerworld.com/pt/models/3573359"
     }
   ]
 }
