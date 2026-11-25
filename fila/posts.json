@@ -287,7 +287,9 @@
       "midias": [
         "blackweek/posts/d5_gomo_story2_ultimas_horas.jpg"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "17975536551187203",
+      "publicado_em": "2026-11-25T19:59:12-03:00"
     },
     {
       "id": "gta_25_suporte_controle",
