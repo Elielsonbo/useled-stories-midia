@@ -317,7 +317,7 @@
     },
     {
       "id": "bw_26_lampion_reels",
-      "horario": "2026-11-26T10:25:00-03:00",
+      "horario": "2026-11-26T08:21:00-03:00",
       "ate": "2026-11-26T20:00:00-03:00",
       "tipo": "reels",
       "midias": [
@@ -329,7 +329,7 @@
     },
     {
       "id": "bw_26_lampion_story_revelacao",
-      "horario": "2026-11-26T10:30:00-03:00",
+      "horario": "2026-11-26T08:22:00-03:00",
       "ate": "2026-11-26T20:00:00-03:00",
       "tipo": "story_imagem",
       "midias": [
@@ -339,7 +339,7 @@
     },
     {
       "id": "bw_26_lampion_story_reels",
-      "horario": "2026-11-26T10:35:00-03:00",
+      "horario": "2026-11-26T08:23:00-03:00",
       "ate": "2026-11-26T20:00:00-03:00",
       "tipo": "story_video",
       "midias": [
