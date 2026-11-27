@@ -369,7 +369,7 @@
     },
     {
       "id": "bw_27_cogumelo_reels",
-      "horario": "2026-11-27T10:25:00-03:00",
+      "horario": "2026-11-27T09:55:00-03:00",
       "ate": "2026-11-27T20:00:00-03:00",
       "tipo": "reels",
       "midias": [
@@ -381,7 +381,7 @@
     },
     {
       "id": "bw_27_cogumelo_story_revelacao",
-      "horario": "2026-11-27T10:30:00-03:00",
+      "horario": "2026-11-27T09:56:00-03:00",
       "ate": "2026-11-27T20:00:00-03:00",
       "tipo": "story_imagem",
       "midias": [
@@ -391,7 +391,7 @@
     },
     {
       "id": "bw_27_cogumelo_story_reels",
-      "horario": "2026-11-27T10:35:00-03:00",
+      "horario": "2026-11-27T09:57:00-03:00",
       "ate": "2026-11-27T20:00:00-03:00",
       "tipo": "story_video",
       "midias": [
