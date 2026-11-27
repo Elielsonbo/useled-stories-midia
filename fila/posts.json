@@ -413,7 +413,9 @@
       "midias": [
         "blackweek/posts/d7_cogumelo_story2_ultimas_horas.jpg"
       ],
-      "status": "pendente"
+      "status": "publicado",
+      "media_id": "17923325553246121",
+      "publicado_em": "2026-11-27T19:59:29-03:00"
     }
   ]
 }
